@@ -260,7 +260,8 @@ PRODUCT_PACKAGES += \
 # HIDL
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
-    android.hidl.base@1.0.vendor
+    android.hidl.base@1.0.vendor \
+    android.hidl.manager@1.0
 
 # IDC
 PRODUCT_COPY_FILES += \
