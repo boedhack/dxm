@@ -8,6 +8,9 @@ cc_binary {
         "Power.cpp",
         "service.cpp",
     ],
+    header_libs: [
+        "generated_kernel_headers",
+    ],
     shared_libs: [
         "liblog",
         "libhidlbase",
