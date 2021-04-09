@@ -82,6 +82,9 @@ void vendor_load_properties()
     // Set hardware SKU prop
     property_override("ro.boot.product.hardware.sku", device);
 
+    // Set safetynet workaround
+    property_override("ro.boot.verifiedbootstate", green);
+
     // Set dalvik heap configuration
     string heapstartsize, heapgrowthlimit, heapsize, heapminfree,
 			heapmaxfree, heaptargetutilization;
