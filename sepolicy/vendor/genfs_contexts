@@ -1,6 +1,9 @@
 # Battery
 genfscon sysfs /module/battery/parameters/enabled u:object_r:sysfs_battery_saver:s0
 
+# Charger
+genfscon sysfs /sys/class/power_supply/battery/input_suspend    u:object_r:vendor_sysfs_battery_supply:s0
+
 # DT2W
 genfscon proc /tp_gesture u:object_r:proc_tp_gesture:s0
 
