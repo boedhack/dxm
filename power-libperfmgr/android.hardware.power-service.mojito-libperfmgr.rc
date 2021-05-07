@@ -1,4 +1,4 @@
-service vendor.power-hal-aidl /system/bin/hw/android.hardware.power-service.mojito-libperfmgr
+service vendor.power /vendor/bin/hw/android.hardware.power-service.mojito-libperfmgr
     class hal
     user root
     group system
