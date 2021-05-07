@@ -53,6 +53,9 @@ void vendor_load_properties()
 {
     string device, model;
 
+    string fp = "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys";
+    string desc = "dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys";
+
     string hwname = GetProperty("ro.boot.hwname", "");
 
     if (hwname == "sunny") {
@@ -71,6 +74,8 @@ void vendor_load_properties()
         property_override(string("ro.product.") + prop + string("name"), device);
         property_override(string("ro.product.") + prop + string("model"), model);
         property_override(string("ro.") + prop + string("build.product"), device);
+        property_override(string("ro.") + prop + string("build.fingerprint"), fp);
+        property_override(string("ro.") + prop + string("build.description"), desc);
     }
 
     // Set hardware SKU prop
