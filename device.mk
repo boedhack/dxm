@@ -31,9 +31,9 @@ $(call inherit-product, vendor/xiaomi/mojito/mojito-vendor.mk)
 
 # A/B
 PRODUCT_PACKAGES += \
-    android.hardware.boot@1.1-impl-qti \
     android.hardware.boot@1.1-impl-qti.recovery \
-    android.hardware.boot@1.1-service
+    bootctrl.sm6150 \
+    bootctrl.sm6150.recovery
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
