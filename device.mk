@@ -340,6 +340,7 @@ TARGET_COMMON_QTI_COMPONENTS := \
     bt \
     telephony \
     usb \
+    vibrator \
     wlan
 
 PRODUCT_COPY_FILES += \
@@ -420,11 +421,8 @@ PRODUCT_PACKAGES += \
     vndservicemanager
 
 # Vibrator
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.xiaomi_sm6150
-
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
+    $(LOCAL_PATH)/configs/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # Vulkan
 PRODUCT_PACKAGES += \
