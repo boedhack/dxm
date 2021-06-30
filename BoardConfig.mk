@@ -140,7 +140,6 @@ TARGET_KERNEL_CONFIG := mojito_defconfig
 TARGET_KERNEL_SOURCE := kernel/xiaomi/mojito
 
 # Media
-TARGET_USES_ION := true
 TARGET_DISABLED_UBWC := true
 
 # Metadata
