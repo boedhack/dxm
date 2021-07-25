@@ -175,6 +175,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.consumerir.xml
 
+PRODUCT_PACKAGES += \
+    CutoutRingServiceSweet
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.4-impl \
