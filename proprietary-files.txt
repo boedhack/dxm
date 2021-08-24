@@ -1182,11 +1182,6 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
-# Touch Improve
--vendor/app/com.qualcomm.qti.improvetouch.service/com.qualcomm.qti.improvetouch.service.apk
-vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0.so
-vendor/lib64/vendor.qti.hardware.improvetouch.touchcompanion@1.0-service.so
-
 # Touchscreen
 vendor/etc/hbtp/loader.cfg
 vendor/lib64/libhbtpclient.so
