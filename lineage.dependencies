@@ -1,0 +1,20 @@
+[
+ {
+   "repository": "boedhack/vxm",
+   "target_path": "vendor/xiaomi/mojito"
+   "remote": "github"
+   "branch": "main"
+ },
+ {
+   "repository": "PixelExperience-Devices/kernel_xiaomi_mojito",
+   "target_path": "kernel/xiaomi/mojito"
+   "remote": "github"
+   "branch": "eleven"
+ }
+  {
+    "repository": "LineageOS/android_hardware_xiaomi",
+    "target_path": "hardware/xiaomi"
+   "remote": "github"
+   "branch": "lineage-18.1"
+  }
+]
