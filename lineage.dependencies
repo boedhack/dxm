@@ -6,15 +6,21 @@
    "branch": "main"
  },
  {
-   "repository": "PixelExperience-Devices/kernel_xiaomi_mojito",
+   "repository": "venom-stark/kernel_xiaomi_mojito",
    "target_path": "kernel/xiaomi/mojito"
    "remote": "github"
-   "branch": "eleven"
- }
+   "branch": "R"
+ },
   {
     "repository": "LineageOS/android_hardware_xiaomi",
     "target_path": "hardware/xiaomi"
    "remote": "github"
    "branch": "lineage-18.1"
-  }
+  },
+ {
+   "repository"  : "kdrag0n/proton-clang",
+   "target_path" : "prebuilts/clang/host/linux-x86/clang-proton",
+   "remote"      : "github",
+   "branch"      : "master"
+ },
 ]
