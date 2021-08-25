@@ -57,10 +57,10 @@ void vendor_load_properties()
 
     if (hwname == "sunny") {
         device = "sunny";
-        model = "M2101K7AG";
+        model = "Redmi Note 10";
     } else {
         device = "mojito";
-        model = "M2101K7AG";
+        model = "Redmi Note 10";
     }
 
     // Override all partitions' props
