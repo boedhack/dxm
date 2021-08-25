@@ -28,21 +28,6 @@
 # this will make sure you have /data ready and then you try to create the dir.
 
 on boot
-    write /dev/cpuset/top-app/cpus 0-7
-    write /dev/cpuset/top-app/boost/cpus 4-7
-    write /dev/cpuset/foreground/cpus 0-6
-    write /dev/cpuset/foreground/boost/cpus 0-6
-    write /dev/cpuset/background/cpus 0-1
-    write /dev/cpuset/system-background/cpus 0-3
-
-    #Set the default voltage to 5v
-    setprop persist.vendor.cp.taper_term_mv 5000
-
-    setprop persist.vendor.qg_cold_temp -150
-    setprop persist.vendor.qg_coff_gain 1
-    setprop persist.vendor.qg_cld_coff_gain 1.5
-
-on boot
     chown system system /sys/class/leds/green/step_ms
     chown system system /sys/class/leds/green/pause_lo_count
     chown system system /sys/class/leds/green/lut_pattern
@@ -65,13 +50,6 @@ on late-fs
     start bootanim
     start vendor.hwcomposer-2-4
     start vendor.qti.hardware.display.allocator
-
-on post-fs-data
-    # EAS
-    write /proc/sys/kernel/sched_upmigrate 95
-    write /proc/sys/kernel/sched_downmigrate 85
-
-    setprop vendor.powerhal.init 1
 
 on boot
     chown system system /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param
