@@ -12,7 +12,7 @@
 /vendor/bin/hw/vendor\.dolby\.hardware\.dms@2\.0-service                u:object_r:hal_dms_default_exec:s0
 
 # Elliptic
-/dev/elliptic[0-9]                                                      u:object_r:ultrasound_device:s0
+/dev/elliptic[0-9]                                                      u:object_r:sensors_device:s0
 
 # Fingerprint
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2.1-service.mojito                      u:object_r:hal_fingerprint_default_exec:s0
