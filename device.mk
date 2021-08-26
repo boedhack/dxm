@@ -424,7 +424,7 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
 
 # TWRP
-$(call inherit-product, device/xiaomi/sm6150-common/twrp/twrp.mk)
+$(call inherit-product, device/xiaomi/mojito/twrp/twrp.mk)
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
