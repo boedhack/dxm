@@ -368,7 +368,7 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/init.mojito.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.mojito.rc
+    $(LOCAL_PATH)/rootdir/etc/init.mojito.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mojito.rc
 
 # RIL
 PRODUCT_PACKAGES += \
