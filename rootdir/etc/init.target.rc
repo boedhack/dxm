@@ -66,6 +66,8 @@ on fs
     mkdir /mnt/vendor/persist/audio 0755 system system
     mkdir /mnt/vendor/persist/camera 0777 root root
 
+    swapon_all /vendor/etc/fstab.qcom
+
 on late-fs
     wait_for_prop hwservicemanager.ready true
     exec_start wait_for_keymaster
