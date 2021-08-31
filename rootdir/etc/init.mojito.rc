@@ -70,10 +70,12 @@ service vendor.light-qti /vendor/bin/hw/android.hardware.lights-service.qti
     disabled
     override
 
-on late-fs
+on late-init
+    # Start services for bootanim
     start surfaceflinger
     start bootanim
     start vendor.hwcomposer-2-4
+    start vendor.configstore-hal
     start vendor.qti.hardware.display.allocator
 
 on boot
