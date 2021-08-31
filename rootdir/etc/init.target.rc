@@ -94,15 +94,6 @@ on boot
     chown system system /sys/class/thermal/thermal_message/sconfig
     write /sys/class/thermal/thermal_message/sconfig 10
 
-on property:sys.boot_completed=1
-    # Set allocstall_threshold to 0
-    # Set swappiness to 100
-    write /sys/module/vmpressure/parameters/allocstall_threshold 0
-    write /proc/sys/vm/swappiness 100
-
-    # Enable ZRAM on boot_complete
-    swapon_all /vendor/etc/fstab.zram
-
     # Runtime fs tuning
     write /sys/block/sda/queue/read_ahead_kb 128
     write /sys/block/sda/queue/nr_requests 128
@@ -170,3 +161,20 @@ service vendor.nv_mac /vendor/bin/nv_mac
     user system
     group system inet net_admin wifi net_raw
     oneshot
+
+# ZRAM
+on property:vendor.post_boot.parsed=1
+    # ZRAM setup
+    write /sys/block/zram0/comp_algorithm lz4
+    write /sys/block/zram0/max_comp_streams 8
+    write /proc/sys/vm/page-cluster 0
+
+# Perf tuning
+on property:persist.sys.device_provisioned=1
+    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,5,7
+    setprop dalvik.vm.dex2oat-threads 6
+
+on property:sys.boot_completed=1
+    # Enable ZRAM on boot_complete
+    write /proc/sys/vm/swappiness 100
+    write /sys/block/zram0/disksize 2147483648
