@@ -358,7 +358,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh \
     init.qcom.sh \
-    fstab.emmc \
     fstab.qcom \
     fstab.zram \
     init.qcom.rc \
