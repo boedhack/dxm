@@ -1,3 +1,6 @@
+# Battery
+genfscon sysfs /module/battery/parameters/enabled u:object_r:sysfs_battery_saver:s0
+
 # DT2W
 genfscon proc /tp_gesture u:object_r:proc_tp_gesture:s0
 
