@@ -88,3 +88,21 @@ on boot
 
 on property:vendor.usb.mimode=*
     setprop persist.vendor.usb.config ${vendor.usb.mimode}
+on property:sys.boot_completed=1
+
+# Camera-specific config
+    mkdir /data/vendor/camera/K7A 0777 system system
+
+    copy /vendor/etc/K7A/para_ini_cal_w_d_0.bin /data/vendor/camera/K7A/para_ini_cal_w_d_0.bin
+    chown system system  /data/vendor/camera/K7A/para_ini_cal_w_d_0.bin
+    chmod 0777 /data/vendor/camera/K7A/para_ini_cal_w_d_0.bin
+
+    copy /vendor/etc/K7A/para_ini_cal_w_uw_1.bin /data/vendor/camera/K7A/para_ini_cal_w_uw_1.bin
+    chown system system  /data/vendor/camera/K7A/para_ini_cal_w_uw_1.bin
+    chmod 0777 /data/vendor/camera/K7A/para_ini_cal_w_uw_1.bin
+
+on property:vendor.camera.bokeh.disable=1
+    setprop persist.vendor.camera.bokeh.disable 1
+
+on property:vendor.camera.bokeh.disable=0
+    setprop persist.vendor.camera.bokeh.disable 0
