@@ -46,6 +46,12 @@ ro.gfx.driver.1            u:object_r:exported3_default_prop:s0
 # IR
 ro.lirc.dev                 u:object_r:lirc_prop:s0
 
+# Panel
+vendor.panel.color                      u:object_r:panel_color_prop:s0
+vendor.panel.display                    u:object_r:panel_color_prop:s0
+vendor.panel.touch_vendor               u:object_r:panel_color_prop:s0
+vendor.panel.vendor                     u:object_r:panel_color_prop:s0
+
 # Recovery
 ro.build.expect.           u:object_r:exported_default_prop:s0
 
