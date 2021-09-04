@@ -54,6 +54,8 @@ void vendor_load_properties()
 {
     string device, model;
 
+    string safetynet = "green";
+
     string fp = "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys";
     string desc = "dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys";
 
@@ -83,7 +85,7 @@ void vendor_load_properties()
     property_override("ro.boot.product.hardware.sku", device);
 
     // Set safetynet workaround
-    property_override("ro.boot.verifiedbootstate", green);
+    property_override("ro.boot.verifiedbootstate", safetynet);
 
     // Set dalvik heap configuration
     string heapstartsize, heapgrowthlimit, heapsize, heapminfree,
