@@ -51,9 +51,9 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_OPTIONAL_vendor=true
 
 PRODUCT_PACKAGES += \
-  update_engine \
-  update_engine_sideload \
-  update_verifier
+    update_engine \
+    update_engine_sideload \
+    update_verifier
 
 PRODUCT_PACKAGES += \
     checkpoint_gc \
@@ -208,10 +208,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
 
-# Device-specific settings
-#PRODUCT_PACKAGES += \
-    XiaomiParts
-
 # DPM
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     persist.vendor.dpm.feature=11
@@ -323,7 +319,7 @@ PRODUCT_COPY_FILES += \
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-p404
 
 PRODUCT_ENFORCE_RRO_TARGETS += *
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += $(LOCAL_PATH)/overlay/packages/apps/CarrierConfig
