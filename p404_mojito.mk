@@ -14,7 +14,7 @@ $(call inherit-product, device/xiaomi/mojito/device.mk)
 # Inherit some common p404 stuff
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
-$(call inherit-product, vendor/p404/configs/common.mk)
+$(call inherit-product, vendor/404/configs/common.mk)
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := p404_mojito
