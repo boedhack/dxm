@@ -106,9 +106,7 @@ TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_mojito
 TARGET_RECOVERY_DEVICE_MODULES := libinit_mojito
 
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/configs/hidl/framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/hidl/framework_compatibility_matrix.xml
 DEVICE_MANIFEST_FILE += \
     $(DEVICE_PATH)/configs/hidl/manifest.xml \
     hardware/qcom-caf/sm8150/media/conf_files/sm6150/c2_manifest.xml
@@ -183,8 +181,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Platform
-TARGET_BOARD_PLATFORM := sm6150
-BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_GPU := qcom-adreno612
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
@@ -195,6 +192,9 @@ TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
+
+# QCOM
+BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
