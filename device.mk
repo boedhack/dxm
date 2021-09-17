@@ -110,7 +110,7 @@ PRODUCT_PACKAGES += \
     libvolumelistener
 
 # Audio
-TARGET_ENABLE_AUDIO_ULL := true
+TARGET_ENABLE_AUDIO_ULL := false
 
 # Audio Configs
 PRODUCT_COPY_FILES += \
