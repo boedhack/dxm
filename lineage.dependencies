@@ -9,7 +9,7 @@
    "repository": "venom-stark/kernel_xiaomi_mojito",
    "target_path": "kernel/xiaomi/mojito"
    "remote": "github"
-   "branch": "CAF-upstream"
+   "branch": "R-gcc"
  },
   {
     "repository": "LineageOS/android_hardware_xiaomi",
