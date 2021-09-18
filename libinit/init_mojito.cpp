@@ -56,8 +56,8 @@ void vendor_load_properties()
 
     string safetynet = "green";
 
-    string fp = "Xiaomi/dipper/dipper:8.1.0/OPM1.171019.011/V9.5.5.0.OEAMIFA:user/release-keys";
-    string desc = "dipper-user 8.1.0 OPM1.171019.011 V9.5.5.0.OEAMIFA release-keys";
+    string fp = "google/redfin/redfin:11/RQ3A.210905.001/7511028:user/release-keys";
+    string desc = "google-user 11 RQ3A.210905.001 7511028 release-keys";
 
     string hwname = GetProperty("ro.boot.hwname", "");
 
