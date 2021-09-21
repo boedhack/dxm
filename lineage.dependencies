@@ -18,15 +18,9 @@
    "branch": "lineage-18.1"
   },
   {
+    "repository":  "kdrag0n/proton-clang",
+    "target_path": "prebuilts/clang/host/linux-x86/clang-proton",
     "remote":      "github",
-    "repository":  "mvaisakh/gcc-arm64",
-    "target_path": "prebuilts/gcc64",
-    "branch":      "gcc-master"
-  },
-    {
-    "remote":      "github",
-    "repository":  "mvaisakh/gcc-arm",
-    "target_path": "prebuilts/gcc32",
-    "branch":      "gcc-master"
+    "branch":      "master"
   }
 ]
