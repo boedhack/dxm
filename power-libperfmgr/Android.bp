@@ -17,6 +17,7 @@ cc_binary {
     name: "android.hardware.power-service.mojito-libperfmgr",
     relative_install_path: "hw",
     init_rc: ["android.hardware.power-service.mojito-libperfmgr.rc"],
+    vintf_fragments: ["android.hardware.power-service.mojito-libperfmgr.xml"],
     shared_libs: [
         "android.hardware.power-ndk_platform",
         "libbase",
