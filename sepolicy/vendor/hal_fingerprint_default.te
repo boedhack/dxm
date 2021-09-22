@@ -1,11 +1,28 @@
+hal_client_domain(hal_fingerprint_default, vendor_hal_perf)
+hal_client_domain(hal_fingerprint_default, hal_power)
+
+# Allow binder communication with hal_power_default
+binder_call(hal_fingerprint_default, hal_power_default)
+
 allow hal_fingerprint_default fingerprint_device:chr_file rw_file_perms;
 allow hal_fingerprint_default fingerprint_data_file:dir create_dir_perms;
 allow hal_fingerprint_default fingerprint_data_file:file create_file_perms;
 allow hal_fingerprint_default input_device:chr_file rw_file_perms;
 allow hal_fingerprint_default vendor_qdsp_device:chr_file r_file_perms;
 allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
-allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
-allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
+
+allow hal_fingerprint_default {
+  input_device
+  vendor_sysfs_graphics
+  sysfs_msm_subsys
+}: dir r_dir_perms;
+
+allow hal_fingerprint_default {
+  vendor_sysfs_fingerprint
+  vendor_sysfs_graphics
+  sysfs_msm_subsys
+}: file rw_file_perms;
+
 allow hal_fingerprint_default vendor_xdsp_device:chr_file r_file_perms;
 allow hal_fingerprint_default sysfs:file rw_file_perms;
 
@@ -13,4 +30,3 @@ r_dir_file(hal_fingerprint_default, firmware_file)
 
 get_prop(hal_fingerprint_default, vendor_adsprpc_prop)
 set_prop(hal_fingerprint_default, vendor_fp_prop)
-hal_client_domain(hal_fingerprint_default, vendor_hal_perf)

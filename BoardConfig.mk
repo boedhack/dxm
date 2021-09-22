@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+BOARD_VENDOR := xiaomi
+
 DEVICE_PATH := device/xiaomi/mojito
 
 BUILD_BROKEN_DUP_RULES := true
@@ -182,7 +184,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_BOARD_GPU := qcom-adreno612
 
 # Power
-TARGET_USES_INTERACTION_BOOST := true
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
 
 # Properties

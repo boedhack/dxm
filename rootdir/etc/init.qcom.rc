@@ -227,16 +227,6 @@ on post-fs-data
     mkdir /data/vendor/fm 0770 system system
     chmod 0770 /data/vendor/fm
 
-    #Create PERFD deamon related dirs
-    mkdir /data/vendor/perfd 0770 root system
-    chmod 2770 /data/vendor/perfd
-    rm /data/vendor/perfd/default_values
-
-    mkdir /data/vendor/secure_element 0777 system system
-
-    #Create IOP  deamon related dirs
-    mkdir /data/vendor/iop 0700 root system
-
     # Mark the copy complete flag to not completed
     write /data/vendor/radio/copy_complete 0
     chown radio radio /data/vendor/radio/copy_complete
@@ -338,9 +328,3 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     socket audio_hw_socket seqpacket 0666 system system
     onrestart restart audioserver
-
-service vendor.power /vendor/bin/hw/android.hardware.power-service-qti
-    override
-    class hal
-    user system
-    group system input
