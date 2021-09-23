@@ -12,3 +12,6 @@ type thermal_normal_prop, property_type;;
 
 # Panel color
 type panel_color_prop, property_type;
+
+# Power
+type power_prop, property_type;
