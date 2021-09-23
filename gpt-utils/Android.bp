@@ -32,8 +32,9 @@ cc_library {
         "gpt-utils.cpp",
         "recovery-ufs-bsg.cpp",
     ],
+    owner: "qti",
     header_libs: [
-        "qti_kernel_headers",
+        "generated_kernel_headers",
     ],
     export_include_dirs: ["."],
 }
