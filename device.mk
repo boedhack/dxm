@@ -237,7 +237,8 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    libhidltransport.vendor
+    libhidltransport.vendor \
+    libhwbinder.vendor
 
 # IDC
 PRODUCT_COPY_FILES += \
