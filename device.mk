@@ -154,9 +154,6 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0.vendor
 
 PRODUCT_PACKAGES += \
-    Snap
-
-PRODUCT_PACKAGES += \
     libmedia_jni_shim
 
 PRODUCT_COPY_FILES += \
