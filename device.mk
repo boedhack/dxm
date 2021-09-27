@@ -370,6 +370,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
+    init.qti.chg_policy.sh \
     fstab.qcom \
     init.qcom.rc \
     init.qcom.usb.rc \
