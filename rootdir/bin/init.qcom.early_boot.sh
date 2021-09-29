@@ -35,3 +35,9 @@ if [ "$boot_reason" = "3" ] || [ "$reboot_reason" = "true" ]; then
 else
     setprop ro.vendor.alarm_boot false
 fi
+
+# check psi enable or not
+if [ -d /proc/pressure ]; then
+    setprop ro.kernel.psi.enabled 1
+fi
+
