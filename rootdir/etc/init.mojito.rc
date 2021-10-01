@@ -61,6 +61,10 @@ on boot
     chown system system /sys/class/power_supply/battery/charging_enabled
     chown system system /sys/class/power_supply/usb/typec_cc_orientation
 
+# Thermal
+    chmod 0770 /sys/class/power_supply/battery/device/thermalcall
+    chown system system /sys/class/power_supply/battery/device/thermalcall
+
     chmod 0777 /sys/class/leds/vibrator/state
     chmod 0777 /sys/class/leds/vibrator/duration
     chmod 0777 /sys/class/leds/vibrator/mode
@@ -89,6 +93,13 @@ on boot
 on property:vendor.usb.mimode=*
     setprop persist.vendor.usb.config ${vendor.usb.mimode}
 on property:sys.boot_completed=1
+
+#add thermal call node
+on property:sys.thermallct.isincall=1
+    write /sys/class/power_supply/battery/device/thermalcall 1
+
+on property:sys.thermallct.isincall=0
+    write /sys/class/power_supply/battery/device/thermalcall 0
 
 # Camera-specific config
     mkdir /data/vendor/camera/K7A 0777 system system
