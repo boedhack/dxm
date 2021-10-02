@@ -65,6 +65,13 @@ on boot
     chmod 0770 /sys/class/power_supply/battery/device/thermalcall
     chown system system /sys/class/power_supply/battery/device/thermalcall
 
+on charger
+    wait /sys/class/power_supply/battery/temp
+    start mi_thermald
+on boot
+    wait /sys/class/power_supply/battery/temp
+    start mi_thermald
+
     chmod 0777 /sys/class/leds/vibrator/state
     chmod 0777 /sys/class/leds/vibrator/duration
     chmod 0777 /sys/class/leds/vibrator/mode
