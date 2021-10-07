@@ -18,6 +18,9 @@ DEVICE_PATH := device/xiaomi/mojito
 
 BUILD_BROKEN_DUP_RULES := true
 
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
+
 # Inherit from proprietary files
 include vendor/xiaomi/mojito/BoardConfigVendor.mk
 
