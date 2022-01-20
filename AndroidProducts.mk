@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_mojito.mk
+    $(LOCAL_DIR)/arrow_mojito.mk
 
 COMMON_LUNCH_CHOICES := \
-    havoc_mojito-user \
-    havoc_mojito-userdebug \
-    havoc_mojito-eng
+    arrow_mojito-user \
+    arrow_mojito-userdebug \
+    arrow_mojito-eng
