@@ -6,10 +6,10 @@
    "branch": "main"
  },
  {
-   "repository": "venom-stark/kernel_xiaomi_mojito",
+   "repository": "PixelExperience-Devices/kernel_xiaomi_mojito",
    "target_path": "kernel/xiaomi/mojito"
    "remote": "github"
-   "branch": "CAF-upstream"
+   "branch": "eleven"
  },
   {
     "repository": "LineageOS/android_hardware_xiaomi",
